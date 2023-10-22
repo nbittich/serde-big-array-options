@@ -1,6 +1,6 @@
 [package]
 name = "serde-big-array-options"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 description = "Allow to serialize/deserialize [Option<T>;N]"
 authors = ["Nordine Bittich"]
