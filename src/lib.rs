@@ -1,3 +1,5 @@
+// Credit: https://github.com/rust-lang/rust/issues/54542#issuecomment-425238990
+
 use std::marker::PhantomData;
 
 use serde::{
@@ -37,7 +39,7 @@ where
         for i in 0..N {
             match (seq.next_element())? {
                 v @ Some(_) => buf[i] = v,
-                None => return Err(serde::de::Error::invalid_length(N, &self)),
+                None => break,
             }
         }
         Ok(buf)
